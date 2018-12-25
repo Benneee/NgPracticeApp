@@ -1,0 +1,25 @@
+<app-header (featureSelected)= "onNavigate($event)"></app-header>
+
+<div class="container">
+<div class="row">
+  <div id="user" class="col-sm-3"> 
+      <app-userlist 
+      *ngIf = "loadedFeature === 'genre-list'">
+      </app-userlist>
+  </div>
+  <div id="choice" class="col-sm-3">
+    <app-userchoice 
+    *ngIf = "loadedFeature !== 'genre-list'">   
+    </app-userchoice>
+  </div>
+
+<div id="det" class="col-sm-3">
+  <app-userdetail
+  *ngIf = "loadedFeature !== 'genre-list'">  
+  </app-userdetail>
+  </div>
+</div>
+</div>
+<div id="foo">
+<app-footer></app-footer>
+</div>

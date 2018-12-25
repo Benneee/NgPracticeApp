@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="row">
+	<div class="col-xs-10">
+		<p class="text-primary header">Genre List</p>
+		<app-listnew
+		(genreAdded) = "onGenreAdded($event)" ></app-listnew>
+		<hr>
+		<ul class="list-group">
+			<a class="list-group-item" style="cursor: pointer;" *ngFor = "let genre of genres" > {{genre.name}}, {{genre.key}} </a>
+		</ul>
+	</div>	
+</div>
+</div>
